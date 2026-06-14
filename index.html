@@ -1143,7 +1143,7 @@
   function renderFAQs() {
     const container = document.getElementById('faq-container');
     if (!container || typeof FAQS === 'undefined') return;
-    container.innerHTML = FAQS.map((faq, i) => 
+    container.innerHTML = FAQS.map((faq, i) => `
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">
           <span>${faq.q}</span>
