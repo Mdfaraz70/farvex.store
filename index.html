@@ -1,1167 +1,454 @@
-!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <!-- ── SEO META ── -->
-  <title>Farvex Store — Premium Tech & Electronics | India's Luxury Gadget Brand</title>
-  <meta name="description" content="Discover premium, curated tech products at Farvex Store. Shop the latest earbuds, smartwatches, cameras, tablets & more. Free delivery, 30-day returns. Shop now at farvex.dpdns.org">
-  <meta name="keywords" content="Farvex Store, premium tech, electronics India, smartwatch, wireless earbuds, gadgets online, luxury tech store">
-  <meta name="author" content="Farvex Store">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://farvex.dpdns.org">
-
-  <!-- ── OPEN GRAPH ── -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://farvex.dpdns.org">
-  <meta property="og:title" content="Farvex Store — Premium Tech & Electronics">
-  <meta property="og:description" content="India's most premium curated tech store. Discover the future, delivered to your door.">
-  <meta property="og:image" content="https://farvex.dpdns.org/images/og-cover.jpg">
-  <meta property="og:site_name" content="Farvex Store">
-  <meta property="og:locale" content="en_IN">
-
-  <!-- ── TWITTER CARD ── -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@farvexstore">
-  <meta name="twitter:title" content="Farvex Store — Premium Tech & Electronics">
-  <meta name="twitter:description" content="India's most premium curated tech store. Discover the future, delivered to your door.">
-  <meta name="twitter:image" content="https://farvex.dpdns.org/images/og-cover.jpg">
-
-  <!-- ── STRUCTURED DATA ── -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "name": "Farvex Store",
-    "url": "https://farvex.dpdns.org",
-    "logo": "https://farvex.dpdns.org/farvex.store.jpg",
-    "description": "Premium curated tech products and electronics",
-    "address": { "@type": "PostalAddress", "addressCountry": "IN" },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-91963-85435",
-      "contactType": "customer service",
-      "availableLanguage": ["English", "Hindi"]
-    },
-    "sameAs": [
-      "https://www.instagram.com/farvex.store",
-      "https://t.me/farvexstore"
-    ]
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farvex — Innovation Meets Everyday Life</title>
+<meta name="description" content="Farvex is a premium technology and lifestyle brand delivering innovative, everyday essentials — fashion, smart gadgets, home, travel, and more.">
+<meta property="og:title" content="Farvex — Innovation Meets Everyday Life">
+<meta property="og:description" content="Discover premium, innovative products designed for modern living.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://farvex.dpdns.org">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0b0c;
+    --bg-elevated:#16161a;
+    --bg-card:#1c1c20;
+    --hairline:rgba(201,169,97,0.22);
+    --gold:#c9a961;
+    --gold-bright:#e8c874;
+    --white:#f5f4f0;
+    --muted:#8b8b92;
+    --muted-dim:#5c5c62;
+    --radius:14px;
   }
-  </script>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--white);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--gold);color:#0b0b0c;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{content:'';width:14px;height:1px;background:var(--gold);}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-0.01em;}
+  .container{max-width:1240px;margin:0 auto;padding:0 32px;}
+  @media(max-width:640px){.container{padding:0 20px;}}
 
-  <!-- ── ICONS ── -->
-  <link rel="icon" type="image/jpeg" href="farvex.store.jpg">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  /* reduced motion */
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+
+  /* Announcement bar */
+  .announce{
+    background:#000;
+    text-align:center;
+    padding:9px 16px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.04em;
+    color:var(--gold);
+    border-bottom:1px solid var(--hairline);
+  }
+
+  /* Nav */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(11,11,12,0.72);
+    backdrop-filter:blur(16px) saturate(140%);
+    -webkit-backdrop-filter:blur(16px) saturate(140%);
+    border-bottom:1px solid var(--hairline);
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 32px;max-width:1240px;margin:0 auto;
+  }
+  .logo{font-family:'Fraunces',serif;font-size:22px;font-weight:600;letter-spacing:0.01em;}
+  .logo em{color:var(--gold);font-style:normal;}
+  .nav-links{display:flex;gap:34px;font-size:14px;color:var(--muted);}
+  .nav-links a{transition:color 0.25s;position:relative;}
+  .nav-links a:hover, .nav-links a:focus-visible{color:var(--white);}
+  .nav-actions{display:flex;align-items:center;gap:20px;}
+  .icon-btn{
+    width:38px;height:38px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--hairline);color:var(--muted);
+    transition:border-color .25s, color .25s;
+    cursor:pointer;background:none;
+  }
+  .icon-btn:hover, .icon-btn:focus-visible{border-color:var(--gold);color:var(--gold);}
+  .btn{
+    font-family:'Inter',sans-serif;font-size:13px;font-weight:600;
+    letter-spacing:0.03em;text-transform:uppercase;
+    padding:13px 26px;border-radius:999px;cursor:pointer;
+    display:inline-flex;align-items:center;gap:8px;
+    transition:transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s;
+    border:1px solid transparent;
+  }
+  .btn-gold{background:linear-gradient(135deg,var(--gold-bright),var(--gold));color:#0b0b0c;}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 30px -8px rgba(201,169,97,0.55);}
+  .btn-ghost{border-color:var(--hairline);color:var(--white);}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+  .mobile-toggle{display:none;background:none;border:none;color:var(--white);font-size:22px;cursor:pointer;}
+  @media(max-width:900px){
+    .nav-links{display:none;}
+    .mobile-toggle{display:block;}
+  }
+
+  /* HERO */
+  .hero{
+    position:relative;
+    min-height:92vh;
+    display:flex;align-items:center;
+    padding:60px 0 80px;
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 20%, rgba(201,169,97,0.10), transparent 60%),
+      radial-gradient(ellipse 50% 40% at 10% 90%, rgba(201,169,97,0.06), transparent 60%),
+      var(--bg);
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.05fr 0.95fr;gap:40px;align-items:center;
+    position:relative;z-index:2;
+  }
+  @media(max-width:960px){.hero-grid{grid-template-columns:1fr;}}
+  .hero h1{
+    font-size:clamp(40px,5.4vw,74px);
+    line-height:1.04;
+    margin:22px 0 22px;
+  }
+  .hero h1 .accent{font-style:italic;color:var(--gold);}
+  .hero p{
+    color:var(--muted);font-size:17px;line-height:1.6;max-width:460px;margin-bottom:34px;
+  }
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero-stats{display:flex;gap:36px;margin-top:56px;}
+  .hero-stats div{font-family:'IBM Plex Mono',monospace;}
+  .hero-stats .num{font-size:22px;color:var(--gold);}
+  .hero-stats .lbl{font-size:11px;color:var(--muted-dim);text-transform:uppercase;letter-spacing:0.08em;margin-top:4px;}
+
+  /* Bezel signature visual */
+  .bezel-wrap{
+    position:relative;
+    aspect-ratio:1/1;
+    max-width:460px;
+    margin:0 auto;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .bezel-ring{
+    position:absolute;inset:0;border-radius:50%;
+    background:
+      repeating-conic-gradient(from 0deg, var(--hairline) 0deg 1.2deg, transparent 1.2deg 6deg);
+    animation:spin 90s linear infinite;
+    -webkit-mask:radial-gradient(circle, transparent 62%, black 63%, black 100%);
+    mask:radial-gradient(circle, transparent 62%, black 63%, black 100%);
+  }
+  .bezel-ring.inner{
+    inset:34px;
+    animation-duration:60s;
+    animation-direction:reverse;
+    background:repeating-conic-gradient(from 0deg, rgba(201,169,97,0.5) 0deg 0.6deg, transparent 0.6deg 3deg);
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .bezel-hand{
+    position:absolute;top:50%;left:50%;width:2px;height:38%;
+    background:linear-gradient(to top, var(--gold-bright), transparent);
+    transform-origin:bottom center;
+    transform:translate(-50%,-100%) rotate(0deg);
+    animation:tick 60s linear infinite;
+    border-radius:2px;
+  }
+  @keyframes tick{to{transform:translate(-50%,-100%) rotate(360deg);}}
+  .bezel-core{
+    position:relative;z-index:2;
+    width:64%;aspect-ratio:1/1;border-radius:28%;
+    background:linear-gradient(155deg,var(--bg-card),#0e0e10 60%);
+    border:1px solid var(--hairline);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 30px 70px -20px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+  .bezel-core .glyph{
+    font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:var(--gold);
+    letter-spacing:0.02em;text-align:center;
+  }
+  .bezel-core .glyph small{
+    display:block;font-family:'IBM Plex Mono',monospace;font-style:normal;
+    font-size:10px;color:var(--muted-dim);letter-spacing:0.15em;margin-top:6px;text-transform:uppercase;
+  }
+
+  /* Marquee */
+  .marquee-strip{
+    border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);
+    padding:16px 0;overflow:hidden;white-space:nowrap;background:var(--bg-elevated);
+  }
+  .marquee-track{display:inline-flex;gap:48px;animation:scroll-left 32s linear infinite;}
+  .marquee-track span{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;
+    text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:10px;
+  }
+  .marquee-track span::after{content:'•';color:var(--gold);}
+  @keyframes scroll-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* Section shell */
+  section.block{padding:100px 0;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;gap:24px;flex-wrap:wrap;}
+  .section-head h2{font-size:clamp(28px,3.4vw,42px);margin-top:14px;}
+  .section-head p{color:var(--muted);max-width:380px;font-size:14px;line-height:1.6;}
+
+  /* Countdown / flash sale */
+  .flash{background:var(--bg-elevated);border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);}
+  .countdown{display:flex;gap:14px;}
+  .countdown .cell{
+    background:var(--bg-card);border:1px solid var(--hairline);border-radius:10px;
+    padding:12px 16px;text-align:center;min-width:64px;
+  }
+  .countdown .cell .n{font-family:'IBM Plex Mono',monospace;font-size:22px;color:var(--gold);}
+  .countdown .cell .u{font-size:9px;color:var(--muted-dim);text-transform:uppercase;letter-spacing:0.1em;}
+
+  /* Product grid */
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  @media(max-width:960px){.grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr;}}
+  .card{
+    background:var(--bg-card);border:1px solid var(--hairline);border-radius:var(--radius);
+    padding:18px;position:relative;overflow:hidden;
+    transition:transform .5s cubic-bezier(.2,.8,.2,1), border-color .3s;
+    transform-style:preserve-3d;
+  }
+  .card:hover{border-color:var(--gold);transform:translateY(-6px);}
+  .card .thumb{
+    aspect-ratio:1/1;border-radius:10px;margin-bottom:16px;
+    background:linear-gradient(155deg,#232327,#141416);
+    display:flex;align-items:center;justify-content:center;
+    border:1px solid rgba(255,255,255,0.03);
+    position:relative;overflow:hidden;
+  }
+  .card .thumb::before{
+    content:'';position:absolute;inset:0;
+    background:radial-gradient(circle at 30% 20%, rgba(201,169,97,0.18), transparent 55%);
+  }
+  .card .tag{
+    position:absolute;top:14px;left:14px;z-index:2;
+    font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.06em;
+    background:var(--gold);color:#0b0b0c;padding:4px 9px;border-radius:6px;text-transform:uppercase;
+  }
+  .card h3{font-size:16px;font-weight:500;margin-bottom:6px;}
+  .card .price{font-family:'IBM Plex Mono',monospace;font-size:15px;color:var(--gold);}
+  .card .price .was{color:var(--muted-dim);text-decoration:line-through;font-size:12px;margin-right:8px;}
+  .card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:12px;}
+  .card .stars{color:var(--gold);font-size:12px;letter-spacing:2px;}
+
+  /* Collection banner */
+  .collection{
+    position:relative;border-radius:20px;overflow:hidden;
+    background:linear-gradient(120deg,#1a1712,#0d0d0e 65%);
+    border:1px solid var(--hairline);
+    padding:70px 56px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+  }
+  @media(max-width:800px){.collection{grid-template-columns:1fr;padding:44px 28px;}}
+  .collection .visual{
+    aspect-ratio:4/3;border-radius:14px;
+    background:
+      repeating-linear-gradient(135deg, rgba(201,169,97,0.08) 0 2px, transparent 2px 22px),
+      linear-gradient(155deg,#242019,#0e0e0f);
+    border:1px solid var(--hairline);
+  }
+
+  /* Brand story */
+  .story{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center;}
+  @media(max-width:900px){.story{grid-template-columns:1fr;}}
+  .story blockquote{
+    font-family:'Fraunces',serif;font-style:italic;font-size:clamp(22px,2.6vw,30px);
+    line-height:1.45;color:var(--white);border-left:2px solid var(--gold);padding-left:24px;margin:24px 0;
+  }
+  .story p{color:var(--muted);line-height:1.75;font-size:15px;margin-bottom:16px;}
+  .founder-card{
+    background:var(--bg-card);border:1px solid var(--hairline);border-radius:var(--radius);padding:26px;
+  }
+  .founder-card .avatar{
+    width:64px;height:64px;border-radius:50%;
+    background:linear-gradient(155deg,var(--gold-bright),var(--gold));
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;font-size:22px;color:#0b0b0c;margin-bottom:16px;
+  }
+  .founder-card h4{font-family:'Fraunces',serif;font-size:18px;margin-bottom:4px;}
+  .founder-card .role{font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:14px;}
+  .founder-card p{font-size:13px;color:var(--muted);line-height:1.6;}
+
+  /* Testimonials */
+  .testi-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;}
+  .testi-track::-webkit-scrollbar{height:4px;}
+  .testi-track::-webkit-scrollbar-thumb{background:var(--hairline);border-radius:4px;}
+  .testi{
+    min-width:320px;scroll-snap-align:start;background:var(--bg-card);border:1px solid var(--hairline);
+    border-radius:var(--radius);padding:26px;
+  }
+  .testi .stars{color:var(--gold);margin-bottom:12px;font-size:13px;letter-spacing:2px;}
+  .testi p{color:var(--white);font-size:14px;line-height:1.6;margin-bottom:16px;}
+  .testi .who{font-size:12px;color:var(--muted-dim);font-family:'IBM Plex Mono',monospace;}
+
+  /* Newsletter */
+  .newsletter{
+    text-align:center;border-radius:20px;padding:70px 32px;
+    background:radial-gradient(ellipse 70% 100% at 50% 0%, rgba(201,169,97,0.12), transparent 70%), var(--bg-elevated);
+    border:1px solid var(--hairline);
+  }
+  .newsletter h2{font-size:clamp(26px,3vw,36px);margin:16px 0 12px;}
+  .newsletter p{color:var(--muted);max-width:420px;margin:0 auto 30px;font-size:14px;}
+  .nl-form{display:flex;max-width:420px;margin:0 auto;gap:10px;}
+  .nl-form input{
+    flex:1;background:var(--bg-card);border:1px solid var(--hairline);border-radius:999px;
+    padding:14px 20px;color:var(--white);font-family:'Inter',sans-serif;font-size:14px;
+  }
+  .nl-form input:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+
+  /* Footer */
+  footer{border-top:1px solid var(--hairline);padding:64px 0 32px;background:#08080a;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:40px;margin-bottom:48px;}
+  @media(max-width:800px){.footer-grid{grid-template-columns:1fr 1fr;}}
+  .footer-grid h5{font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted-dim);margin-bottom:18px;}
+  .footer-grid ul{list-style:none;display:flex;flex-direction:column;gap:11px;}
+  .footer-grid a{color:var(--muted);font-size:14px;transition:color .2s;}
+  .footer-grid a:hover{color:var(--gold);}
+  .footer-bottom{
+    border-top:1px solid var(--hairline);padding-top:24px;display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:12px;font-size:12px;color:var(--muted-dim);
+  }
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:#000;padding:10px 16px;z-index:200;}
+  .skip-link:focus{left:16px;top:16px;}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+</style>
 </head>
 <body>
-<!-- ══════════════════════════════════════════
-     NAVBAR
-══════════════════════════════════════════ -->
-<nav class="navbar" role="navigation" aria-label="Main navigation">
-  <div class="nav-container">
-    <!-- Logo -->
-    <a class="nav-logo" href="#" onclick="navigateTo('home'); return false;" aria-label="Farvex Store Home">
-      <img src="farvex.store.jpg" alt="Farvex Store Logo" style="width:40px;height:40px;border-radius:50%;object-fit:cover;">
-      <div class="nav-logo-text"><span>Farvex</span> Store</div>
-    </a>
+<a href="#main" class="skip-link">Skip to content</a>
 
-    <!-- Desktop Nav Links -->
-    <div class="nav-links" role="menubar">
-      <a class="nav-link active" data-page="home" href="#" onclick="navigateTo('home'); return false;" role="menuitem">Home</a>
-      <a class="nav-link" data-page="shop" href="#" onclick="navigateTo('shop'); return false;" role="menuitem">Shop</a>
-      <a class="nav-link" data-page="blog" href="#" onclick="navigateTo('blog'); return false;" role="menuitem">Blog</a>
-      <a class="nav-link" data-page="about" href="#" onclick="navigateTo('about'); return false;" role="menuitem">About</a>
-      <a class="nav-link" data-page="contact" href="#" onclick="navigateTo('contact'); return false;" role="menuitem">Contact</a>
+<div class="announce">FREE WORLDWIDE SHIPPING ON ORDERS OVER $75 &nbsp;·&nbsp; NEW ARRIVALS DROP EVERY FRIDAY</div>
+
+<header>
+  <nav aria-label="Primary">
+    <a href="#main" class="logo">Farv<em>ex</em></a>
+    <div class="nav-links">
+      <a href="#shop">Shop</a>
+      <a href="#trending">Trending</a>
+      <a href="#collections">Collections</a>
+      <a href="#story">About</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
     </div>
-
-    <!-- Search Bar -->
-    <div class="nav-search" role="search" onclick="openSearch()" style="cursor:pointer">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="text" placeholder="Search products... ( / )" readonly aria-label="Search">
-    </div>
-
-    <!-- Nav Actions -->
     <div class="nav-actions">
-      <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Shopping cart" title="Cart">
-        <i class="fas fa-bag-shopping"></i>
-        <span class="nav-badge cart-count" style="display:none">0</span>
-      </button>
-      <button class="nav-icon-btn" id="nav-login-btn" onclick="openAuth('login')" aria-label="Login" title="Login / Register">
-        <i class="fas fa-user"></i>
-      </button>
-      <button class="nav-icon-btn" id="nav-user-btn" onclick="navigateTo('dashboard')" aria-label="Account" title="My Account" style="display:none;font-weight:700;font-size:.75rem"></button>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="icon-btn" aria-label="Search">⌕</button>
+      <button class="icon-btn" aria-label="Wishlist">♡</button>
+      <button class="icon-btn" aria-label="Cart">⛃</button>
+      <button class="mobile-toggle" aria-label="Menu">☰</button>
     </div>
-  </div>
-</nav>
-
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
-  <nav class="mobile-nav-links">
-    <a class="mobile-nav-link" data-page="home" href="#" onclick="navigateTo('home'); return false;"><i class="fas fa-home"></i> Home</a>
-    <a class="mobile-nav-link" data-page="shop" href="#" onclick="navigateTo('shop'); return false;"><i class="fas fa-store"></i> Shop</a>
-    <a class="mobile-nav-link" data-page="blog" href="#" onclick="navigateTo('blog'); return false;"><i class="fas fa-newspaper"></i> Blog</a>
-    <a class="mobile-nav-link" data-page="about" href="#" onclick="navigateTo('about'); return false;"><i class="fas fa-info-circle"></i> About Us</a>
-    <a class="mobile-nav-link" data-page="contact" href="#" onclick="navigateTo('contact'); return false;"><i class="fas fa-envelope"></i> Contact</a>
-    <a class="mobile-nav-link" data-page="faq" href="#" onclick="navigateTo('faq'); return false;"><i class="fas fa-question-circle"></i> FAQ</a>
   </nav>
-  <div class="mobile-actions">
-    <button class="btn btn-ghost" style="flex:1;justify-content:center" onclick="openAuth('login'); closeMobileMenu()">Login</button>
-    <button class="btn btn-primary" style="flex:1;justify-content:center" onclick="openAuth('register'); closeMobileMenu()">Sign Up</button>
-  </div>
-</div>
+</header>
 
+<main id="main">
 
-<!-- ══════════════════════════════════════════
-     PAGE: HOME
-══════════════════════════════════════════ -->
-<div id="page-home" class="page active">
-<!-- HERO -->
-  <section class="hero" aria-label="Hero banner">
-    <div class="hero-bg">
-      <div class="hero-grid"></div>
-      <div class="hero-orb orb-1"></div>
-      <div class="hero-orb orb-2"></div>
-      <div class="hero-orb orb-3"></div>
-    </div>
-
-    <div class="hero-content">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
       <div>
-        <div class="hero-eyebrow animate-fade-up animate-delay-1">
-          <span class="dot"></span>
-          ✦ New 2025 Collection Is Here
+        <span class="eyebrow">Farvex — Premium Everyday Innovation</span>
+        <h1>Objects made<br>for <span class="accent">how you</span><br>actually live.</h1>
+        <p>Farvex curates and designs premium technology and lifestyle essentials — built with the same care as a fine timepiece, priced for everyday life.</p>
+        <div class="hero-ctas">
+          <a href="#trending" class="btn btn-gold">Shop New Arrivals →</a>
+          <a href="#collections" class="btn btn-ghost">Explore Collections</a>
         </div>
-        <h1 class="hero-title animate-fade-up animate-delay-2">
-          <span class="line-1">The Future</span>
-          <span class="line-2">Starts Here.</span>
-        </h1>
-        <p class="hero-desc animate-fade-up animate-delay-3">
-          Curated premium tech products designed for those who demand the extraordinary. Where cutting-edge innovation meets uncompromising quality.
-        </p>
-        <div class="hero-cta animate-fade-up animate-delay-4">
-          <button class="btn btn-primary btn-lg" onclick="navigateTo('shop')">
-            <i class="fas fa-bag-shopping"></i> Shop Now
-          </button>
-          <button class="btn btn-ghost btn-lg" onclick="navigateTo('about')">
-            <i class="fas fa-play"></i> Our Story
-          </button>
-        </div>
-        <div class="hero-stats animate-fade-up animate-delay-5">
-          <div>
-            <div class="hero-stat-num"><span data-count="50000" data-suffix="+">0+</span></div>
-            <div class="hero-stat-label">Happy Customers</div>
-          </div>
-          <div>
-            <div class="hero-stat-num"><span data-count="500" data-suffix="+">0+</span></div>
-            <div class="hero-stat-label">Premium Products</div>
-          </div>
-          <div>
-            <div class="hero-stat-num"><span data-count="99" data-suffix="%">0%</span></div>
-            <div class="hero-stat-label">Satisfaction Rate</div>
-          </div>
+        <div class="hero-stats">
+          <div><div class="num">40K+</div><div class="lbl">Happy Customers</div></div>
+          <div><div class="num">4.9★</div><div class="lbl">Average Rating</div></div>
+          <div><div class="num">120+</div><div class="lbl">Countries Shipped</div></div>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-product-showcase">
-          <div class="hero-product-card">
-            <div class="hero-product-img">🎧</div>
-            <div class="hero-product-name">AuraSync Pro</div>
-            <div class="hero-product-price gradient-text">
-              ₹2,999
-              <span class="original">₹4,999</span>
-            </div>
-            <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="addToCart(1)">
-              <i class="fas fa-bag-shopping"></i> Add to Cart
-            </button>
-          </div>
-          <div class="hero-float-badge hero-float-badge-1">
-            <div class="badge-icon">⭐</div>
-            <div class="badge-text">4.9 Rating</div>
-            <div class="badge-sub">512 reviews</div>
-          </div>
-          <div class="hero-float-badge hero-float-badge-2">
-            <div class="badge-icon">🚚</div>
-            <div class="badge-text">Free Delivery</div>
-            <div class="badge-sub">Orders above ₹999</div>
-          </div>
+      <div class="bezel-wrap" aria-hidden="true">
+        <div class="bezel-ring"></div>
+        <div class="bezel-ring inner"></div>
+        <div class="bezel-hand"></div>
+        <div class="bezel-core">
+          <div class="glyph">Farvex<small>Est. 2024</small></div>
         </div>
       </div>
     </div>
   </section>
-<!-- TRUST MARQUEE -->
-  <div class="marquee-strip" aria-hidden="true">
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
     <div class="marquee-track">
-      <span class="marquee-item"><i class="fas fa-circle"></i> Free Shipping Above ₹999</span>
-      <span class="marquee-item"><i class="fas fa-circle"></i> 30-Day Easy Returns</span>
-      <span class="marquee-item"><i class="fas fa-circle"></i> 100% Genuine Products</span>
-      <span class="marquee-item"><i class="fas fa-circle"></i> Secure Payments</span>
-      <span class="marquee-item"><i class="fas fa-circle"></i> 24/7 WhatsApp Support</span>
-      <span class="marquee-item"><i class="fas fa-circle"></i> 1 Year Warranty</span>
-      <span class="marquee-item"><i class="fas fa-circle"></i> 50,000+ Happy Customers</span>
-      <span class="marquee-item"><i class="fas fa-circle"></i> Premium Quality Guaranteed</span>
-      <!-- Duplicate for seamless loop -->
-      <span class="marquee-item"><i class="fas fa-circle"></i> Free Shipping Above ₹999</span>
-      <span class="marquee-item"><i class="fas fa-circle"></i> 30-Day Easy Returns</span>
-      <span class="marquee-item"><i class="fas fa-circle"></i> 100% Genuine Products</span>
-      <span class="marquee-item"><i class="fas fa-circle"></i> Secure Payments</span>
-      <span class="marquee-item"><i class="fas fa-circle"></i> 24/7 WhatsApp Support</span>
-      <span class="marquee-item"><i class="fas fa-circle"></i> 1 Year Warranty</span>
-      <span class="marquee-item"><i class="fas fa-circle"></i> 50,000+ Happy Customers</span>
-      <span class="marquee-item"><i class="fas fa-circle"></i> Premium Quality Guaranteed</span>
+      <span>Smart Gadgets</span><span>Fashion</span><span>Travel Essentials</span><span>Home Innovations</span><span>Tech Accessories</span><span>Limited Edition</span>
+      <span>Smart Gadgets</span><span>Fashion</span><span>Travel Essentials</span><span>Home Innovations</span><span>Tech Accessories</span><span>Limited Edition</span>
     </div>
   </div>
 
-  <!-- CATEGORIES -->
-  <section class="section" aria-labelledby="categories-heading">
+  <!-- FLASH SALE -->
+  <section class="block flash" id="shop">
     <div class="container">
-      <div class="section-header-center reveal">
-        <div class="section-label">Browse by Type</div>
-        <h2 class="section-title" id="categories-heading">Shop by <span class="accent">Category</span></h2>
-        <p class="section-desc">Find exactly what you're looking for across our curated collections of premium tech products.</p>
-      </div>
-      <div class="grid-4" id="categories-grid" style="margin-top:48px"></div>
-    </div>
-  </section>
-
-  <!-- FEATURED PRODUCTS -->
-  <section class="section" style="padding-top:0" aria-labelledby="featured-heading">
-    <div class="container">
-      <div class="flex-between reveal" style="margin-bottom:40px;flex-wrap:wrap;gap:16px">
+      <div class="section-head">
         <div>
-          <div class="section-label">Handpicked for You</div>
-          <h2 class="section-title" id="featured-heading">Featured <span class="accent">Products</span></h2>
+          <span class="eyebrow">Ends Soon</span>
+          <h2>Flash Deals</h2>
         </div>
-        <button class="btn btn-ghost" onclick="navigateTo('shop')">View All <i class="fas fa-arrow-right"></i></button>
+        <div class="countdown" id="countdown">
+          <div class="cell"><div class="n" id="cd-h">00</div><div class="u">Hrs</div></div>
+          <div class="cell"><div class="n" id="cd-m">00</div><div class="u">Min</div></div>
+          <div class="cell"><div class="n" id="cd-s">00</div><div class="u">Sec</div></div>
+        </div>
       </div>
-      <div class="grid-4" id="featured-grid"></div>
+      <div class="grid reveal" id="flash-grid">
+        <article class="card"><span class="tag">-30%</span>
+          <div class="thumb"></div>
+          <h3>Aether Wireless Earbuds</h3>
+          <div class="stars">★★★★★</div>
+          <div class="meta"><div class="price"><span class="was">$89</span>$62</div></div>
+        </article>
+        <article class="card"><span class="tag">-20%</span>
+          <div class="thumb"></div>
+          <h3>Nomad Travel Organizer</h3>
+          <div class="stars">★★★★☆</div>
+          <div class="meta"><div class="price"><span class="was">$54</span>$43</div></div>
+        </article>
+        <article class="card"><span class="tag">-15%</span>
+          <div class="thumb"></div>
+          <h3>Lumen Desk Lamp</h3>
+          <div class="stars">★★★★★</div>
+          <div class="meta"><div class="price"><span class="was">$72</span>$61</div></div>
+        </article>
+        <article class="card"><span class="tag">-25%</span>
+          <div class="thumb"></div>
+          <h3>Glide Magnetic Charger</h3>
+          <div class="stars">★★★★★</div>
+          <div class="meta"><div class="price"><span class="was">$45</span>$34</div></div>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- WHY CHOOSE FARVEX -->
-  <section class="section" style="background:var(--surface-1)" aria-labelledby="why-heading">
+  <!-- TRENDING -->
+  <section class="block" id="trending">
     <div class="container">
-      <div class="section-header-center reveal" style="margin-bottom:56px">
-        <div class="section-label">Why We're Different</div>
-        <h2 class="section-title" id="why-heading">The <span class="accent">Farvex</span> Promise</h2>
-        <p class="section-desc">We don't just sell products. We curate experiences designed around your lifestyle and demands.</p>
-      </div>
-      <div class="grid-4">
-        <div class="feature-card reveal reveal-delay-1">
-          <div class="feature-icon">🏆</div>
-          <div class="feature-title">Premium Quality</div>
-          <p class="feature-desc">Every product passes a rigorous 72-point quality check. Only the finest makes it to your doorstep.</p>
-        </div>
-        <div class="feature-card reveal reveal-delay-2">
-          <div class="feature-icon">🚀</div>
-<div class="feature-title">Lightning Delivery</div>
-          <p class="feature-desc">Express delivery across India. Metro cities get same-day or next-day delivery in most cases.</p>
-        </div>
-        <div class="feature-card reveal reveal-delay-3">
-          <div class="feature-icon">🔒</div>
-          <div class="feature-title">Secure & Safe</div>
-          <p class="feature-desc">256-bit SSL encryption, secure payment gateways, and zero data sharing with third parties.</p>
-        </div>
-        <div class="feature-card reveal reveal-delay-4">
-          <div class="feature-icon">💬</div>
-          <div class="feature-title">24/7 Support</div>
-          <p class="feature-desc">Real humans on WhatsApp & Telegram. We reply in under 30 minutes during business hours.</p>
-        </div>
-        <div class="feature-card reveal reveal-delay-1">
-          <div class="feature-icon">↩️</div>
-          <div class="feature-title">Easy Returns</div>
-          <p class="feature-desc">30-day no-questions return policy. If you're not thrilled, we'll make it right. Always.</p>
-        </div>
-        <div class="feature-card reveal reveal-delay-2">
-          <div class="feature-icon">✅</div>
-          <div class="feature-title">100% Authentic</div>
-          <p class="feature-desc">Authorized reseller for every brand we carry. Original products with manufacturer warranty.</p>
-        </div>
-        <div class="feature-card reveal reveal-delay-3">
-          <div class="feature-icon">💳</div>
-          <div class="feature-title">Flexible Payments</div>
-          <p class="feature-desc">0% EMI on major cards, UPI, net banking, and buy-now-pay-later. Shop your way.</p>
-        </div>
-        <div class="feature-card reveal reveal-delay-4">
-          <div class="feature-icon">🎁</div>
-          <div class="feature-title">Gift Wrapping</div>
-          <p class="feature-desc">Premium gift packaging available for every order. Make every purchase an experience.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-<!-- BEST SELLERS -->
-  <section class="section" aria-labelledby="bestsellers-heading">
-    <div class="container">
-      <div class="flex-between reveal" style="margin-bottom:40px;flex-wrap:wrap;gap:16px">
-        <div>
-          <div class="section-label">Most Loved</div>
-          <h2 class="section-title" id="bestsellers-heading">Best <span class="accent">Sellers</span></h2>
-        </div>
-        <button class="btn btn-ghost" onclick="navigateTo('shop')">Browse All <i class="fas fa-arrow-right"></i></button>
-      </div>
-      <div class="grid-4" id="bestsellers-grid"></div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section" style="background:var(--surface-1)" aria-labelledby="testimonials-heading">
-    <div class="container">
-      <div class="section-header-center reveal" style="margin-bottom:56px">
-        <div class="section-label">Social Proof</div>
-        <h2 class="section-title" id="testimonials-heading">What Our <span class="accent">Customers</span> Say</h2>
-        <p class="section-desc">Join 50,000+ happy customers who've made Farvex their go-to destination for premium tech.</p>
-      </div>
-      <div class="grid-3" id="testimonials-grid"></div>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section class="newsletter-section" aria-labelledby="newsletter-heading">
-    <div class="container">
-      <div class="section-header-center reveal">
-        <div class="section-label">Stay in the Loop</div>
-        <h2 class="section-title" id="newsletter-heading">Get <span class="accent">Exclusive</span> Deals</h2>
-        <p class="section-desc">Subscribe and be the first to know about new arrivals, flash sales, and members-only offers. No spam, ever.</p>
-        <form class="newsletter-form" onsubmit="handleNewsletter(event)" style="margin-top:32px">
-          <input class="newsletter-input" type="email" placeholder="Your email address" required aria-label="Email for newsletter">
-          <button class="btn btn-primary" type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
-        </form>
-        <p style="margin-top:14px;font-size:.8rem;color:var(--text-muted)">✓ No spam &nbsp;·&nbsp; ✓ Unsubscribe anytime &nbsp;·&nbsp; ✓ 10% off your first order</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOCIAL MEDIA -->
-  <section class="section-sm" aria-labelledby="social-heading">
-    <div class="container">
-      <div class="section-header-center reveal" style="margin-bottom:36px">
-        <div class="section-label">Join the Community</div>
-        <h2 class="section-title" id="social-heading">Follow <span class="accent">@farvex.store</span></h2>
-      </div>
-      <div class="grid-3 reveal" style="gap:16px">
-        <a href="https://www.instagram.com/farvex.store" target="_blank" rel="noopener" class="glass-card" style="padding:28px;text-align:center;text-decoration:none;display:block">
-          <div style="font-size:2.5rem;margin-bottom:12px">📸</div>
-          <div style="font-family:var(--font-display);font-weight:700;margin-bottom:4px">@farvex.store</div>
-          <div style="color:var(--text-muted);font-size:.85rem;margin-bottom:16px">Instagram • Follow for daily deals</div>
-          <span class="btn btn-ghost btn-sm"><i class="fab fa-instagram"></i> Follow Us</span>
-        </a>
-        <a href="https://t.me/farvexstore" target="_blank" rel="noopener" class="glass-card" style="padding:28px;text-align:center;text-decoration:none;display:block">
-          <div style="font-size:2.5rem;margin-bottom:12px">✈️</div>
-          <div style="font-family:var(--font-display);font-weight:700;margin-bottom:4px">@farvexstore</div>
-          <div style="color:var(--text-muted);font-size:.85rem;margin-bottom:16px">Telegram • Exclusive channel deals</div>
-          <span class="btn btn-ghost btn-sm"><i class="fab fa-telegram"></i> Join Channel</span>
-  </a>
-        <a href="https://wa.me/919196385435" target="_blank" rel="noopener" class="glass-card" style="padding:28px;text-align:center;text-decoration:none;display:block">
-          <div style="font-size:2.5rem;margin-bottom:12px">💬</div>
-          <div style="font-family:var(--font-display);font-weight:700;margin-bottom:4px">+91 91963 85435</div>
-          <div style="color:var(--text-muted);font-size:.85rem;margin-bottom:16px">WhatsApp • Instant support & orders</div>
-          <span class="btn btn-ghost btn-sm"><i class="fab fa-whatsapp"></i> Chat Now</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-</div><!-- END PAGE HOME -->
-<!-- ══════════════════════════════════════════
-     PAGE: SHOP
-══════════════════════════════════════════ -->
-<div id="page-shop" class="page">
-  <div class="page-hero">
-    <div class="page-hero-bg"></div>
-    <div class="page-hero-content container">
-      <div class="page-hero-breadcrumb">
-        <a href="#" onclick="navigateTo('home')">Home</a>
-        <span>›</span>
-        <span>Shop</span>
-      </div>
-      <h1 class="animate-fade-up">The <span class="gradient-text">Collection</span></h1>
-      <p class="animate-fade-up animate-delay-1" style="max-width:480px;margin:12px auto 0">500+ premium products. Curated with obsessive attention to quality and design.</p>
-    </div>
-  </div>
-
-  <div class="container" style="padding-bottom:80px">
-    <div class="shop-layout">
-      <!-- Sidebar Filters -->
-      <aside class="shop-sidebar" aria-label="Product filters">
-        <h3 style="margin-bottom:24px;font-size:1.1rem">Filters</h3>
-        <div class="filter-group">
-          <div class="filter-title">Category <span style="font-weight:400;color:var(--text-muted);font-size:.8rem">▾</span></div>
-          <label class="filter-option"><input type="checkbox" class="filter-checkbox" checked> <span class="filter-label">Audio</span><span class="filter-count">24</span></label>
-          <label class="filter-option"><input type="checkbox" class="filter-checkbox"> <span class="filter-label">Wearables</span><span class="filter-count">18</span></label>
-          <label class="filter-option"><input type="checkbox" class="filter-checkbox"> <span class="filter-label">Photography</span><span class="filter-count">31</span></label>
-          <label class="filter-option"><input type="checkbox" class="filter-checkbox"> <span class="filter-label">Tablets</span><span class="filter-count">15</span></label>
-          <label class="filter-option"><input type="checkbox" class="filter-checkbox"> <span class="filter-label">Peripherals</span><span class="filter-count">42</span></label>
-          <label class="filter-option"><input type="checkbox" class="filter-checkbox"> <span class="filter-label">Accessories</span><span class="filter-count">67</span></label>
-          <label class="filter-option"><input type="checkbox" class="filter-checkbox"> <span class="filter-label">Monitors</span><span class="filter-count">12</span></label>
-        </div>
-        <div class="filter-group">
-          <div class="filter-title">Price Range</div>
-          <div class="price-range-inputs">
-            <input type="number" class="price-input" id="price-min" placeholder="Min ₹" value="0">
-            <input type="number" class="price-input" id="price-max" placeholder="Max ₹" value="50000">
-          </div>
-        </div>
-        <div class="filter-group">
-          <div class="filter-title">Rating</div>
-          <label class="filter-option"><input type="checkbox" class="filter-checkbox" checked> <span class="filter-label">★★★★★ (5 star)</span></label>
-          <label class="filter-option"><input type="checkbox" class="filter-checkbox" checked> <span class="filter-label">★★★★☆ (4+ star)</span></label>
-          <label class="filter-option"><input type="checkbox" class="filter-checkbox"> <span class="filter-label">★★★☆☆ (3+ star)</span></label>
-        </div>
-        <div class="filter-group">
-          <div class="filter-title">Availability</div>
-          <label class="filter-option"><input type="checkbox" class="filter-checkbox" checked> <span class="filter-label">In Stock</span></label>
-          <label class="filter-option"><input type="checkbox" class="filter-checkbox"> <span class="filter-label">On Sale</span></label>
-          <label class="filter-option"><input type="checkbox" class="filter-checkbox"> <span class="filter-label">New Arrivals</span></label>
-        </div>
-        <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px" onclick="renderShop()">Apply Filters</button>
-      </aside>
-  <!-- Products Area -->
-      <div>
-        <div class="shop-toolbar">
-          <p style="font-size:.875rem;color:var(--text-muted)">Showing <strong style="color:var(--text-primary)">8</strong> of 500+ products</p>
-          <div class="flex gap-12" style="align-items:center">
-            <select class="shop-sort" aria-label="Sort products">
-              <option>Sort: Featured</option>
-              <option>Price: Low to High</option>
-              <option>Price: High to Low</option>
-              <option>Newest First</option>
-              <option>Best Rating</option>
-            </select>
-            <div class="shop-view-toggle">
-              <button class="view-btn active" title="Grid view"><i class="fas fa-th"></i></button>
-              <button class="view-btn" title="List view"><i class="fas fa-list"></i></button>
-            </div>
-          </div>
-        </div>
-        <div class="shop-products-grid" id="shop-grid"></div>
-        <div class="pagination" style="margin-top:40px">
-          <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
-          <button class="page-btn active">1</button>
-          <button class="page-btn">2</button>
-          <button class="page-btn">3</button>
-          <span style="color:var(--text-muted);padding:0 4px">...</span>
-          <button class="page-btn">12</button>
-          <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     PAGE: PRODUCT DETAIL
-══════════════════════════════════════════ -->
-<div id="page-product" class="page">
-  <div class="container" style="padding-top:calc(var(--nav-height) + 20px);padding-bottom:80px">
-    <div id="product-detail-container"></div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     PAGE: ABOUT US
-══════════════════════════════════════════ -->
-<div id="page-about" class="page">
-  <div class="page-hero">
-    <div class="page-hero-bg"></div>
-    <div class="page-hero-content container">
-      <div class="page-hero-breadcrumb">
-        <a href="#" onclick="navigateTo('home')">Home</a>
-        <span>›</span><span>About Us</span>
-      </div>
-      <div class="section-label" style="margin:0 auto 16px;display:inline-flex">Our Story</div>
-      <h1 class="animate-fade-up">Built for <span class="gradient-text">Dreamers.</span></h1>
-      <p class="animate-fade-up animate-delay-1" style="max-width:520px;margin:12px auto 0">We started Farvex with one belief: everyone deserves access to technology that inspires.</p>
-    </div>
-  </div>
-
-  <div class="container" style="padding-bottom:80px">
-    <!-- About Hero Grid -->
-    <div class="about-hero-grid">
-      <div>
-        <div class="section-label">The Farvex Journey</div>
-        <h2 class="section-title" style="margin-bottom:20px">We're Redefining<br><span class="accent">Premium Tech</span> in India</h2>
-        <p style="margin-bottom:20px">Farvex Store was founded with a singular mission: to make the world's best technology accessible to every Indian who dares to dream bigger. We believe premium shouldn't mean inaccessible.</p>
-        <p style="margin-bottom:28px">From our first warehouse in 2022 to serving over 50,000 customers across India today, every step of our journey has been guided by one north star — your delight.</p>
-        <div class="grid-2" style="gap:16px;margin-bottom:32px">
-          <div class="glass-card" style="padding:20px">
-            <div style="font-family:var(--font-display);font-size:1.75rem;font-weight:700;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">2022</div>
-            <div style="font-size:.85rem;color:var(--text-muted)">Year Founded</div>
-      </div>
-          <div class="glass-card" style="padding:20px">
-            <div style="font-family:var(--font-display);font-size:1.75rem;font-weight:700;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">50K+</div>
-            <div style="font-size:.85rem;color:var(--text-muted)">Happy Customers</div>
-          </div>
-          <div class="glass-card" style="padding:20px">
-            <div style="font-family:var(--font-display);font-size:1.75rem;font-weight:700;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">500+</div>
-            <div style="font-size:.85rem;color:var(--text-muted)">Premium Products</div>
-          </div>
-          <div class="glass-card" style="padding:20px">
-            <div style="font-family:var(--font-display);font-size:1.75rem;font-weight:700;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">4.9★</div>
-            <div style="font-size:.85rem;color:var(--text-muted)">Average Rating</div>
-          </div>
-        </div>
-        <button class="btn btn-primary" onclick="navigateTo('shop')">Explore Our Products <i class="fas fa-arrow-right"></i></button>
-      </div>
-      <div class="about-hero-visual reveal">
-        <div class="about-hero-img"><img src="farvex.store.jpg" alt="Farvex Store Logo" style="width:40px;height:40px;border-radius:50%;object-fit:cover;"></div>
-        <div class="about-stat-card about-stat-card-1 glass-card">
-          <div class="about-stat-num gradient-text">50K+</div>
-          <div class="about-stat-label">Orders Delivered</div>
-        </div>
-        <div class="about-stat-card about-stat-card-2 glass-card">
-          <div class="about-stat-num gradient-text">4.9★</div>
-          <div class="about-stat-label">Customer Rating</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Mission -->
-    <div style="text-align:center;max-width:680px;margin:60px auto;padding:48px 40px;background:var(--glass);border:1px solid rgba(124,58,237,0.2);border-radius:var(--radius-xl);position:relative;overflow:hidden">
-      <div style="position:absolute;top:0;left:0;right:0;height:2px;background:var(--gradient-primary)"></div>
-      <div class="section-label" style="margin:0 auto 20px;display:inline-flex">Our Mission</div>
-      <p style="font-size:1.3rem;font-style:italic;line-height:1.75;color:var(--text-secondary)">"To democratize premium technology in India, one exceptional product at a time — because every person deserves tools that make their life extraordinary."</p>
-      <div style="margin-top:20px;color:var(--violet-light);font-weight:600">— The Farvex Team</div>
-    </div>
-  <!-- Team -->
-    <div style="margin-top:60px">
-      <div class="section-header-center reveal" style="margin-bottom:40px">
-        <div class="section-label">The People</div>
-        <h2 class="section-title">Meet the <span class="accent">Team</span></h2>
-      </div>
-      <div class="team-grid">
-        <div class="team-card reveal reveal-delay-1">
-          <div class="team-avatar">A</div>
-          <div class="team-name">Md faraz</div>
-          <div class="team-role">Founder & CEO</div>
-        </div>
-        <div class="team-card reveal reveal-delay-2">
-          <div class="team-avatar" style="background:linear-gradient(135deg,#06B6D4,#0EA5E9)">P</div>
-          <div class="team-name">Samriddhi Saha</div>
-          <div class="team-role">Head of Product</div>
-        </div>
-        <div class="team-card reveal reveal-delay-3">
-          <div class="team-avatar" style="background:linear-gradient(135deg,#F59E0B,#EF4444)">R</div>
-          <div class="team-name">Vishal Kesherwani</div>
-          <div class="team-role">CTO & Co-Founder</div>
-        </div>
-        <div class="team-card reveal reveal-delay-4">
-          <div class="team-avatar" style="background:linear-gradient(135deg,#10B981,#06B6D4)">N</div>
-          <div class="team-name">Fazlur Rahman</div>
-          <div class="team-role">Head of Customer Success</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     PAGE: BLOG
-══════════════════════════════════════════ -->
-<div id="page-blog" class="page">
-  <div class="page-hero">
-    <div class="page-hero-bg"></div>
-    <div class="page-hero-content container">
-      <div class="page-hero-breadcrumb">
-        <a href="#" onclick="navigateTo('home')">Home</a>
-        <span>›</span><span>Blog</span>
-      </div>
-      <div class="section-label" style="display:inline-flex;margin:0 auto 16px">Farvex Insights</div>
-      <h1 class="animate-fade-up">The <span class="gradient-text">Tech Pulse</span></h1>
-      <p class="animate-fade-up animate-delay-1" style="max-width:480px;margin:12px auto 0">Tech insights, buying guides, and stories from the frontier of innovation.</p>
-    </div>
-  </div>
-
-  <div class="container" style="padding-bottom:80px">
-    <div class="grid-3" id="blog-grid" style="margin-top:-20px"></div>
-    <div class="pagination">
-      <button class="page-btn active">1</button>
-      <button class="page-btn">2</button>
-      <button class="page-btn">3</button>
-    </div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     PAGE: CONTACT
-══════════════════════════════════════════ -->
-<div id="page-contact" class="page">
-  <div class="page-hero">
-    <div class="page-hero-bg"></div>
-    <div class="page-hero-content container">
-      <div class="page-hero-breadcrumb">
-        <a href="#" onclick="navigateTo('home')">Home</a>
-        <span>›</span><span>Contact</span>
-      </div>
-      <div class="section-label" style="display:inline-flex;margin:0 auto 16px">Get in Touch</div>
-      <h1 class="animate-fade-up">We'd Love to <span class="gradient-text">Hear From You</span></h1>
-      <p class="animate-fade-up animate-delay-1" style="max-width:480px;margin:12px auto 0">Questions, feedback, or just want to say hi — we're always listening.</p>
-    </div>
-  </div>
-
-  <div class="container" style="padding-bottom:80px">
-    <div class="contact-grid">
-      <!-- Contact Info -->
-      <div>
-        <div class="contact-info-card reveal">
-          <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
-          <div class="contact-info-label">WhatsApp Support</div>
-          <div class="contact-info-value"><a href="https://wa.me/919196385435" target="_blank">+91 91963 85435</a></div>
-          <div style="font-size:.8rem;color:var(--text-muted);margin-top:6px">Mon–Sat, 9 AM – 8 PM IST</div>
-</div>
-        <div class="contact-info-card reveal reveal-delay-1">
-          <div class="contact-info-icon"><i class="fab fa-telegram"></i></div>
-          <div class="contact-info-label">Telegram Channel</div>
-          <div class="contact-info-value"><a href="https://t.me/farvexstore" target="_blank">@farvexstore</a></div>
-          <div style="font-size:.8rem;color:var(--text-muted);margin-top:6px">Join for exclusive deals & updates</div>
-        </div>
-        <div class="contact-info-card reveal reveal-delay-2">
-          <div class="contact-info-icon"><i class="fab fa-instagram"></i></div>
-          <div class="contact-info-label">Instagram</div>
-          <div class="contact-info-value"><a href="https://www.instagram.com/farvex.store" target="_blank">@farvex.store</a></div>
-          <div style="font-size:.8rem;color:var(--text-muted);margin-top:6px">DMs open for collabs & support</div>
-        </div>
-        <div class="contact-info-card reveal reveal-delay-3">
-          <div class="contact-info-icon"><i class="fas fa-globe"></i></div>
-          <div class="contact-info-label">Website</div>
-          <div class="contact-info-value"><a href="https://farvex.dpdns.org" target="_blank">farvex.dpdns.org</a></div>
-          <div style="font-size:.8rem;color:var(--text-muted);margin-top:6px">Shop anytime, anywhere</div>
-        </div>
-      </div>
-
-      <!-- Contact Form -->
-      <div class="contact-form-card reveal">
-        <h2 style="margin-bottom:8px">Send Us a Message</h2>
-        <p style="color:var(--text-muted);font-size:.9rem;margin-bottom:28px">We reply to every message within 24 hours.</p>
-        <form onsubmit="handleContactForm(event)">
-          <div class="form-grid">
-            <div class="form-group">
-              <label class="form-label">First Name *</label>
-              <input type="text" class="form-input" placeholder="Aryan" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Last Name *</label>
-              <input type="text" class="form-input" placeholder="Kapoor" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Email Address *</label>
-            <input type="email" class="form-input" placeholder="aryan@example.com" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Phone Number</label>
-            <input type="tel" class="form-input" placeholder="+91 98765 43210">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Subject *</label>
-            <select class="form-select form-input" required>
-              <option value="">Select a topic</option>
-              <option>Order Inquiry</option>
-              <option>Product Question</option>
-              <option>Return / Refund</option>
-              <option>Technical Support</option>
-              <option>Partnership / Collab</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Your Message *</label>
-            <textarea class="form-textarea" placeholder="Tell us how we can help you..." required></textarea>
-          </div>
-          <button class="btn btn-primary btn-lg" type="submit" style="width:100%;justify-content:center">
-            <i class="fas fa-paper-plane"></i> Send Message
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ══════════════════════════════════════════
-     PAGE: FAQ
-══════════════════════════════════════════ -->
-<div id="page-faq" class="page">
-  <div class="page-hero">
-    <div class="page-hero-bg"></div>
-    <div class="page-hero-content container">
-      <div class="page-hero-breadcrumb">
-        <a href="#" onclick="navigateTo('home')">Home</a>
-        <span>›</span><span>FAQ</span>
-      </div>
-      <div class="section-label" style="display:inline-flex;margin:0 auto 16px">Help Center</div>
-      <h1 class="animate-fade-up">Frequently Asked <span class="gradient-text">Questions</span></h1>
-      <p class="animate-fade-up animate-delay-1" style="max-width:480px;margin:12px auto 0">Everything you need to know about shopping at Farvex Store.</p>
-    </div>
-  </div>
-
-  <div class="container" style="padding-bottom:80px">
-    <div style="max-width:760px;margin:0 auto" id="faq-container">
-      <!-- FAQs rendered by JS -->
-    </div>
-    <div style="text-align:center;margin-top:48px;padding:40px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-xl)">
-      <div style="font-size:2rem;margin-bottom:12px">💬</div>
-      <h3 style="margin-bottom:8px">Still have questions?</h3>
-      <p style="color:var(--text-muted);margin-bottom:20px">Our team is here to help. Reach out and we'll get back to you quickly.</p>
-      <a href="https://wa.me/919196385435" target="_blank" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-    </div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     PAGE: PRIVACY POLICY
-══════════════════════════════════════════ -->
-<div id="page-privacy" class="page">
-  <div class="page-hero">
-    <div class="page-hero-bg"></div>
-    <div class="page-hero-content container">
-      <h1 class="animate-fade-up">Privacy <span class="gradient-text">Policy</span></h1>
-    </div>
-  </div>
-  <div class="container">
-    <div class="policy-content">
-      <div class="policy-last-updated">Last updated: January 1, 2025</div>
-      <div class="policy-section">
-        <h3>1. Information We Collect</h3>
-        <p>At Farvex Store, we collect information you provide directly to us, such as when you create an account, place an order, or contact us for support. This includes name, email address, phone number, shipping address, and payment information (processed securely through third-party payment providers).</p>
-      </div>
-      <div class="policy-section">
-        <h3>2. How We Use Your Information</h3>
-        <p>We use your information to:</p>
-        <ul>
-          <li>Process and fulfill your orders</li>
-          <li>Send order confirmations and shipping updates</li>
-          <li>Respond to customer service requests</li>
-          <li>Send promotional offers (only with your consent)</li>
-          <li>Improve our website and services</li>
-          <li>Comply with legal obligations</li>
-        </ul>
-      </div>
-      <div class="policy-section">
-        <h3>3. Information Sharing</h3>
-        <p>We do not sell, trade, or rent your personal information to third parties. We may share your information with trusted service providers who assist in operating our website and conducting our business, subject to confidentiality agreements.</p>
-      </div>
-      <div class="policy-section">
-        <h3>4. Data Security</h3>
-        <p>We implement industry-standard security measures including SSL encryption to protect your personal information during transmission. Payment information is processed through PCI-DSS compliant payment processors and is never stored on our servers.</p>
-      </div>
-      <div class="policy-section">
-        <h3>5. Your Rights</h3>
-        <p>You have the right to access, correct, or delete your personal information. You may also opt out of marketing communications at any time. Contact us at our WhatsApp number or Instagram to exercise these rights.</p>
-        </div>
-      <div class="policy-section">
-        <h3>6. Contact Us</h3>
-        <p>For privacy-related questions, contact us via WhatsApp at +91 91963 85435 or Instagram @farvex.store.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     PAGE: TERMS & CONDITIONS
-══════════════════════════════════════════ -->
-<div id="page-terms" class="page">
-  <div class="page-hero">
-    <div class="page-hero-bg"></div>
-    <div class="page-hero-content container">
-      <h1 class="animate-fade-up">Terms & <span class="gradient-text">Conditions</span></h1>
-    </div>
-  </div>
-  <div class="container">
-    <div class="policy-content">
-      <div class="policy-last-updated">Last updated: January 1, 2025</div>
-      <div class="policy-section">
-        <h3>1. Acceptance of Terms</h3>
-        <p>By accessing and using Farvex Store (farvex.dpdns.org), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.</p>
-      </div>
-      <div class="policy-section">
-        <h3>2. Product Information</h3>
-        <p>We strive to provide accurate product descriptions, images, and pricing. However, we reserve the right to correct any errors and to change or update information at any time without prior notice. Product images are for illustrative purposes and actual products may vary slightly.</p>
-      </div>
-      <div class="policy-section">
-        <h3>3. Order & Payment</h3>
-        <p>All orders are subject to acceptance and availability. We reserve the right to refuse service to anyone. Prices are in Indian Rupees (INR) and include applicable taxes. Payment must be made in full before order dispatch.</p>
-      </div>
-      <div class="policy-section">
-        <h3>4. Shipping & Delivery</h3>
-        <p>We ship across India. Delivery timelines are estimates and may vary due to factors beyond our control. Farvex Store is not liable for delays caused by courier partners, natural events, or government restrictions.</p>
-      </div>
-      <div class="policy-section">
-        <h3>5. Returns & Refunds</h3>
-        <p>Returns are accepted within 30 days of delivery for products in original condition. Certain product categories may have different return policies as noted on the product page. Refunds are processed within 5-7 business days after successful return inspection.</p>
-      </div>
-      <div class="policy-section">
-        <h3>6. Intellectual Property</h3>
-        <p>All content on Farvex Store including text, graphics, logos, and images is the property of Farvex Store and protected by applicable intellectual property laws.</p>
-      </div>
-      <div class="policy-section">
-        <h3>7. Governing Law</h3>
-        <p>These terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of courts in India.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     PAGE: DASHBOARD
-══════════════════════════════════════════ -->
-<div id="page-dashboard" class="page">
-  <div class="container" style="padding-top:calc(var(--nav-height) + 40px);padding-bottom:80px">
-    <h1 style="margin-bottom:0;font-size:1.8rem">My <span class="gradient-text">Account</span></h1>
-    <p style="color:var(--text-muted);margin-bottom:32px">Welcome back, manage your orders and profile here.</p>
-
-    <div class="dashboard-layout">
-      <!-- Sidebar -->
-      <aside class="dashboard-nav">
-        <div class="dashboard-user">
-          <div class="dashboard-avatar">AJ</div>
-          <div class="dashboard-user-name">Alex Johnson</div>
-          <div class="dashboard-user-email">alex@example.com</div>
-        </div>
-        <nav class="dashboard-links">
-          <div class="dashboard-link active" data-panel="orders" onclick="switchDashPanel('orders')"><i class="fas fa-box"></i> My Orders</div>
-          <div class="dashboard-link" data-panel="wishlist" onclick="switchDashPanel('wishlist')"><i class="fas fa-heart"></i> Wishlist</div>
-          <div class="dashboard-link" data-panel="profile" onclick="switchDashPanel('profile')"><i class="fas fa-user"></i> Profile</div>
-          <div class="dashboard-link" data-panel="address" onclick="switchDashPanel('address')"><i class="fas fa-map-marker-alt"></i> Addresses</div>
-          <div class="dashboard-link" data-panel="track" onclick="switchDashPanel('track')"><i class="fas fa-truck"></i> Track Order</div>
-          <div class="divider"></div>
-          <div class="dashboard-link" style="color:#F87171" onclick="showToast('Logged out successfully', 'info'); navigateTo('home')"><i class="fas fa-sign-out-alt"></i> Logout</div>
-        </nav>
-      </aside>
-
-      <!-- Panels -->
-      <div>
-        <!-- Orders Panel -->
-        <div id="panel-orders" class="dashboard-panel active">
-          <h2 class="dashboard-panel-title">My Orders</h2>
-          <div class="order-card">
-            <div class="order-header">
-              <span class="order-id">#FRX-20250112-001</span>
-              <span class="order-status delivered">✓ Delivered</span>
-            </div>
-            <div class="order-items-preview">
-              <div class="order-item-thumb">🎧</div>
-              <div class="order-item-thumb">🔌</div>
-            </div>
-            <div class="order-footer">
-              <span>Jan 12, 2025 · 2 items</span>
-              <span class="order-total">₹4,298</span>
-            </div>
-          </div>
-          <div class="order-card">
-            <div class="order-header">
-              <span class="order-id">#FRX-20250108-042</span>
-              <span class="order-status shipped">🚚 Shipped</span>
-            </div>
-            <div class="order-items-preview">
-              <div class="order-item-thumb">⌚</div>
-            </div>
-            <div class="order-footer">
-              <span>Jan 8, 2025 · 1 item</span>
-              <span class="order-total">₹8,499</span>
-            </div>
-          </div>
-          <div class="order-card">
-            <div class="order-header">
-              <span class="order-id">#FRX-20241228-103</span>
-              <span class="order-status processing">⏳ Processing</span>
-            </div>
-            <div class="order-items-preview">
-              <div class="order-item-thumb">📷</div>
-              <div class="order-item-thumb">🔗</div>
-            </div>
-            <div class="order-footer">
-              <span>Dec 28, 2024 · 2 items</span>
-              <span class="order-total">₹8,198</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Wishlist Panel -->
-        <div id="panel-wishlist" class="dashboard-panel">
-          <h2 class="dashboard-panel-title">My Wishlist</h2>
-          <p style="color:var(--text-muted)">Items you've saved will appear here. <a href="#" onclick="navigateTo('shop')" style="color:var(--violet-light)">Browse products →</a></p>
-        </div>
-
-        <!-- Profile Panel -->
-        <div id="panel-profile" class="dashboard-panel">
-          <h2 class="dashboard-panel-title">My Profile</h2>
-          <div class="contact-form-card" style="max-width:560px">
-            <div class="form-grid">
-              <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" value="Alex"></div>
-              <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" value="Johnson"></div>
-            </div>
-            <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" value="alex@example.com"></div>
-            <div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-input" value="+91 98765 43210"></div>
-            <button class="btn btn-primary" onclick="showToast('Profile updated!','success')">Save Changes</button>
-          </div>
-        </div>
-        <!-- Address Panel -->
-        <div id="panel-address" class="dashboard-panel">
-          <h2 class="dashboard-panel-title">Saved Addresses</h2>
-          <div class="glass-card" style="padding:24px;max-width:400px">
-            <div style="display:flex;justify-content:space-between;margin-bottom:12px;align-items:center">
-              <span class="badge badge-new">Default</span>
-              <button class="btn btn-ghost btn-sm">Edit</button>
-            </div>
-            <div style="font-weight:600;margin-bottom:6px">Alex Johnson</div>
-            <div style="font-size:.875rem;color:var(--text-secondary);line-height:1.7">123, Tech Park, Sector 18<br>Gurugram, Haryana 122015<br>India</div>
-          </div>
-          <button class="btn btn-ghost" style="margin-top:16px" onclick="showToast('Add address coming soon!','info')">+ Add New Address</button>
-        </div>
-
-        <!-- Track Panel -->
-        <div id="panel-track" class="dashboard-panel">
-          <h2 class="dashboard-panel-title">Track Order</h2>
-          <div class="contact-form-card" style="max-width:480px">
-            <div class="form-group"><label class="form-label">Order ID</label><input type="text" class="form-input" placeholder="e.g. FRX-20250112-001"></div>
-            <button class="btn btn-primary" onclick="showToast('Order tracking coming soon! Check WhatsApp for updates.','info')"><i class="fas fa-search"></i> Track Order</button>
-          </div>
-          <div style="margin-top:32px">
-            <div class="glass-card" style="padding:24px">
-              <div style="font-weight:600;margin-bottom:20px">#FRX-20250112-001 — AuraSync Pro Earbuds</div>
-              <div style="display:flex;flex-direction:column;gap:16px">
-                ${['Order Placed — Jan 12, 2025 9:00 AM','Payment Confirmed — Jan 12, 2025 9:05 AM','Processing — Jan 12, 2025 2:00 PM','Shipped — Jan 13, 2025 10:00 AM','Out for Delivery — Jan 14, 2025 8:00 AM'].map((step,i,arr)=>
-                  <div style="display:flex;gap:14px;align-items:flex-start">
-                    <div style="width:28px;height:28px;border-radius:50%;background:${i===arr.length-1?'var(--gradient-primary)':'rgba(16,185,129,0.2)'};border:2px solid ${i===arr.length-1?'var(--violet)':'#10B981'};display:flex;align-items:center;justify-content:center;font-size:.7rem;flex-shrink:0;color:${i===arr.length-1?'white':'#34D399'}">${i===arr.length-1?'●':'✓'}</div>
-                    <div style="font-size:.875rem;color:${i===arr.length-1?'var(--text-primary)':'var(--text-muted)'};padding-top:4px">${step}</div>
-                  </div>
-                ).join('')}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     FOOTER
-══════════════════════════════════════════ -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <!-- Brand -->
-      <div>
-        <a class="nav-logo" href="#" onclick="navigateTo('home'); return false;" style="display:inline-flex;margin-bottom:16px">
-          <div class="nav-logo-icon">✦</div>
-          <div class="nav-logo-text"><span>Farvex</span> Store</div>
-        </a>
-        <p class="footer-brand-desc">India's most premium curated tech store. We bring the world's finest technology to your doorstep with unmatched quality and service.</p>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/farvex.store" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://t.me/farvexstore" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-          <a href="https://wa.me/919196385435" target="_blank" rel="noopener" class="footer-social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        </div>
-      </div>
-    <!-- Quick Links -->
-      <div>
-        <div class="footer-col-title">Quick Links</div>
-        <div class="footer-links">
-          <a class="footer-link" href="#" onclick="navigateTo('home'); return false;">Home</a>
-          <a class="footer-link" href="#" onclick="navigateTo('shop'); return false;">Shop</a>
-          <a class="footer-link" href="#" onclick="navigateTo('blog'); return false;">Blog</a>
-          <a class="footer-link" href="#" onclick="navigateTo('about'); return false;">About Us</a>
-          <a class="footer-link" href="#" onclick="navigateTo('contact'); return false;">Contact</a>
-          <a class="footer-link" href="#" onclick="navigateTo('faq'); return false;">FAQ</a>
-        </div>
-      </div>
-
-      <!-- Support -->
-      <div>
-        <div class="footer-col-title">Support</div>
-        <div class="footer-links">
-          <a class="footer-link" href="#" onclick="navigateTo('faq'); return false;">Help Center</a>
-          <a class="footer-link" href="#" onclick="navigateTo('dashboard'); return false;">Track Order</a>
-          <a class="footer-link" href="#">Returns Policy</a>
-          <a class="footer-link" href="#">Shipping Info</a>
-          <a class="footer-link" href="#" onclick="navigateTo('privacy'); return false;">Privacy Policy</a>
-          <a class="footer-link" href="#" onclick="navigateTo('terms'); return false;">Terms & Conditions</a>
-        </div>
-      </div>
-
-      <!-- Contact -->
-      <div>
-        <div class="footer-col-title">Contact Us</div>
-        <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/919196385435" target="_blank" style="color:inherit">+91 91963 85435</a></div>
-        <div class="footer-contact-item"><i class="fab fa-telegram"></i><a href="https://t.me/farvexstore" target="_blank" style="color:inherit">@farvexstore</a></div>
-        <div class="footer-contact-item"><i class="fab fa-instagram"></i><a href="https://instagram.com/farvex.store" target="_blank" style="color:inherit">@farvex.store</a></div>
-        <div class="footer-contact-item"><i class="fas fa-globe"></i><a href="https://farvex.dpdns.org" target="_blank" style="color:inherit">farvex.dpdns.org</a></div>
-        <div style="margin-top:20px;font-size:.8rem;color:var(--text-muted)">Business Hours:<br>Mon – Sat: 9 AM – 8 PM IST</div>
-      </div>
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-      <div class="footer-copyright">© 2025 Farvex Store. All rights reserved. Made with 💜 in India.</div>
-      <div class="footer-bottom-links">
-        <a class="footer-bottom-link" href="#" onclick="navigateTo('privacy'); return false;">Privacy Policy</a>
-        <a class="footer-bottom-link" href="#" onclick="navigateTo('terms'); return false;">Terms</a>
-        <a class="footer-bottom-link" href="#" onclick="navigateTo('faq'); return false;">FAQ</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-
-<!-- ══════════════════════════════════════════
-     FLOATING BUTTONS
-══════════════════════════════════════════ -->
-<div class="floating-buttons" aria-label="Quick contact">
-  <a href="https://wa.me/919196385435" target="_blank" rel="noopener" class="floating-btn float-wa" data-tooltip="Chat on WhatsApp" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a href="https://t.me/farvexstore" target="_blank" rel="noopener" class="floating-btn float-tg" data-tooltip="Join Telegram" aria-label="Telegram">
-    <i class="fab fa-telegram"></i>
-  </a>
-  <button class="floating-btn float-top" id="float-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" data-tooltip="Back to top" aria-label="Scroll to top">
-    ↑
-  </button>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     CART SIDEBAR
-══════════════════════════════════════════ -->
-  <div class="cart-overlay" id="cart-overlay" onclick="closeSidebars()" aria-hidden="true"></div>
-<aside class="cart-sidebar" id="cart-sidebar" role="dialog" aria-label="Shopping cart">
-  <div class="cart-header">
-    <h2 class="cart-title">🛒 Your Cart</h2>
-    <button class="cart-close" onclick="closeSidebars()" aria-label="Close cart">✕</button>
-  </div>
-  <div class="cart-items" id="cart-items"></div>
-  <div class="cart-footer">
-    <div class="cart-subtotal">
-      <span class="cart-subtotal-label">Subtotal</span>
-      <span class="cart-subtotal-price" id="cart-subtotal">₹0</span>
-    </div>
-    <p style="font-size:.8rem;color:var(--text-muted);margin-bottom:14px;text-align:center">Taxes & shipping calculated at checkout</p>
-    <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-bottom:10px" onclick="openCheckout()">
-      <i class="fas fa-lock"></i> Secure Checkout
-    </button>
-    <button class="btn btn-ghost" style="width:100%;justify-content:center" onclick="closeSidebars(); navigateTo('shop')">
-      Continue Shopping
-    </button>
-  </div>
-</aside>
-
-
-<!-- ══════════════════════════════════════════
-     SEARCH MODAL
-══════════════════════════════════════════ -->
-<div class="search-modal" id="search-modal" role="dialog" aria-label="Search" onclick="if(event.target===this)closeSearch()">
-  <div class="search-modal-inner">
-    <div class="search-modal-input-wrap">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted);flex-shrink:0"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="text" id="search-modal-input" class="search-modal-input" placeholder="Search for products, brands, categories...">
-      <span class="search-modal-close" onclick="closeSearch()">✕</span>
-    </div>
-    <div class="search-suggestions">
-      <div class="search-suggestion" onclick="closeSearch(); navigateTo('shop')"><i class="fas fa-fire"></i> AuraSync Pro Earbuds</div>
-      <div class="search-suggestion" onclick="closeSearch(); navigateTo('shop')"><i class="fas fa-fire"></i> NovaSphere Smartwatch</div>
-      <div class="search-suggestion" onclick="closeSearch(); navigateTo('shop')"><i class="fas fa-search"></i> Wireless earbuds under ₹3000</div>
-      <div class="search-suggestion" onclick="closeSearch(); navigateTo('shop')"><i class="fas fa-search"></i> Best smartwatch 2025</div>
-      <div class="search-suggestion" onclick="closeSearch(); navigateTo('shop')"><i class="fas fa-tag"></i> New arrivals</div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════════
-     AUTH MODAL
-══════════════════════════════════════════ -->
-<div class="auth-overlay" id="auth-overlay" onclick="if(event.target===this)closeAuth()" role="dialog" aria-label="Login / Register">
-  <div class="auth-modal">
-    <button class="auth-close" onclick="closeAuth()" aria-label="Close">✕</button>
-    <div class="auth-tabs">
-      <div class="auth-tab active" data-tab="login" onclick="switchAuthTab('login')">Sign In</div>
-      <div class="auth-tab" data-tab="register" onclick="switchAuthTab('register')">Create Account</div>
-    </div>
-
-    <!-- Login Form -->
-    <div class="auth-form active" data-form="login">
-      <div class="auth-form-title">Welcome Back 👋</div>
-      <div class="auth-form-sub">Sign in to access your orders, wishlist, and exclusive deals.</div>
-      <form onsubmit="handleLogin(event)">
-        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="you@example.com" required></div>
-        <div class="form-group"><label class="form-label">Password</label><input type="password" class="form-input" placeholder="••••••••" required></div>
-<div style="text-align:right;margin-top:-12px;margin-bottom:20px"><a href="#" style="font-size:.8rem;color:var(--violet-light)">Forgot password?</a></div>
-        <button class="btn btn-primary btn-lg" type="submit" style="width:100%;justify-content:center">Sign In</button>
-      </form>
-      <div class="auth-divider"><span>or continue with</span></div>
-      <button class="auth-social-btn" onclick="handleLogin({preventDefault:()=>{}})">🔍 Continue with Google</button>
-    </div>
-
-    <!-- Register Form -->
-    <div class="auth-form" data-form="register" style="display:none">
-      <div class="auth-form-title">Join Farvex ✦</div>
-      <div class="auth-form-sub">Create your account and get 10% off your first order.</div>
-      <form onsubmit="handleRegister(event)">
-        <div class="form-grid">
-          <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Aryan" required></div>
-          <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" placeholder="Kapoor" required></div>
-        </div>
-        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="you@example.com" required></div>
-        <div class="form-group"><label class="form-label">Password</label><input type="password" class="form-input" placeholder="Create a strong password" required></div>
-        <button class="btn btn-primary btn-lg" type="submit" style="width:100%;justify-content:center;margin-top:4px">Create Account</button>
-        <p style="font-size:.75rem;color:var(--text-muted);text-align:center;margin-top:12px">By signing up, you agree to our <a href="#" onclick="closeAuth();navigateTo('terms')" style="color:var(--violet-light)">Terms</a> and <a href="#" onclick="closeAuth();navigateTo('privacy')" style="color:var(--violet-light)">Privacy Policy</a>.</p>
-      </form>
-    </div>
-  </div>
-</div>
-<!-- ── TOAST CONTAINER ── -->
-<div class="toast-container" id="toast-container" aria-live="polite"></div>
-
-
-<!-- ── SCRIPTS ── -->
-<script src="js/main.js"></script>
-<script>
-  // Auth tab switching fix
-  document.querySelectorAll('.auth-tab').forEach(tab => {
-    tab.addEventListener('click', function() {
-      const target = this.dataset.tab;
-      document.querySelectorAll('.auth-form').forEach(f => {
-        f.style.display = f.dataset.form === target ? 'block' : 'none';
-        f.classList.toggle('active', f.dataset.form === target);
-      });
-    });
-  });
-
-  // FAQ render
-  function renderFAQs() {
-    const container = document.getElementById('faq-container');
-    if (!container || typeof FAQS === 'undefined') return;
-    container.innerHTML = FAQS.map((faq, i) => `
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          <span>${faq.q}</span>
-          <div class="faq-arrow">▾</div>
-        </div>
-        <div class="faq-answer">
-          <div class="faq-answer-inner">${faq.a}</div>
-        </div>
-      </div>
-    ).join('');
-  }
-
-  // Override navigateTo to also render FAQs
-  const _nav = navigateTo;
-  navigateTo = function(page, id) {
-    _nav(page, id);
-    if (page === 'faq') setTimeout(renderFAQs, 50);
-  };
-</script>
-</body>
-</html>
+      <div class="section-head reveal">
+        <div><span class="eyebrow">Curated Weekly</span><h2>Trending Right Now</
